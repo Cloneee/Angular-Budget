@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app-name {
+    height: 68px;
+    width: 100%;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.header{
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.total-budget{
+    display: flex;
+    height: 250px;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    justify-content: center;
+    align-items: center;
+}
+.values {
+    font-weight: 300;
+    font-size: 60px;
+    color: white;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
