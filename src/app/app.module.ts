@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BudgetComponent } from './budget/budget.component';
 import { AddFormComponent } from './add-form/add-form.component';
+import { ConvertComponent } from './convert/convert.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BudgetComponent,
-    AddFormComponent
+    AddFormComponent,
+    ConvertComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

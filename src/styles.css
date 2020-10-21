@@ -14,9 +14,6 @@ body {
     height: 68px;
     width: 100%;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     position: relative;
 }
 .header{
