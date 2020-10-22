@@ -9,13 +9,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-.app-name {
-    height: 68px;
-    width: 100%;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    position: relative;
-}
 .header{
     font-weight: 500;
     font-size: 30px;
