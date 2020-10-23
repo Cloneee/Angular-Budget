@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.budget-item {
+  display: flex;
+  width: 100%;
+  background-color: lightgrey;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.budget-description {
+  display: flex;
+  flex-grow: 1;
+  font-size: 18px;
+  margin-left: 5px;
+  align-items: center;
+}
+
+.budget-amount {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+
+.expenses p{
+    color:red;
+}
+.expenses .budget-amount{
+    background-color: lightcoral;
+}

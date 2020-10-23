@@ -1,0 +1,43 @@
+.budget-items-section {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.budget-items-container {
+  display: flex;
+  max-width: 680px;
+  height: 100%;
+  width: 100%;
+}
+
+.incomes-column,
+.expenses-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 24;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.incomes-column h1 {
+  color: rgb(8, 176, 135)
+}
+
+.expenses-column h1 {
+  color: rgb(234, 69, 28)
+}
+
+
+.expenses-column p{
+  color:red;
+}
+.expenses-column .budget-amount{
+  background-color: lightcoral;
+}

@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { BudgetItemListComponent } from './budget-item-list/budget-item-list.component';
+import { BudgetItemCardComponent } from './budget-item-list/budget-item-card/budget-item-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BudgetItemListComponent } from './budget-item-list/budget-item-list.com
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    BudgetItemListComponent
+    BudgetItemListComponent,
+    BudgetItemCardComponent
   ],
   imports: [
     BrowserModule,
