@@ -1,11 +1,4 @@
-<div class="root">
-  <div class="budget-item expenses">
-    <div class="budget-description ">
-      <p>test</p>
-    </div>
-    <div class="budget-amount">
-      <p>696969</p>
-    </div>
-  </div>
-
+<div class="d-flex flex-row justify-content-between budget-item" [ngClass]="{'income': isIncome, 'expense': !isIncome}" (click)="onClickMe()">
+  <div class="description align-self-center">abc</div>
+  <div class="amount">6969</div>
 </div>

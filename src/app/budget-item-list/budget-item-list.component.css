@@ -18,6 +18,8 @@
   flex-direction: column;
   flex-basis: 0;
   flex-grow: 1;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 h1 {
@@ -27,17 +29,10 @@ h1 {
 }
 
 .incomes-column h1 {
-  color: rgb(8, 176, 135)
+  color: #39B798;
 }
 
 .expenses-column h1 {
-  color: rgb(234, 69, 28)
+  color: #D94C03;
 }
 
-
-.expenses-column p{
-  color:red;
-}
-.expenses-column .budget-amount{
-  background-color: lightcoral;
-}
