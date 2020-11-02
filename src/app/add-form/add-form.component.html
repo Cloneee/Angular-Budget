@@ -1,13 +1,13 @@
-<form class="center">
+<form class="center" #itemform="ngForm" (ngSubmit)="onSubmit(itemform)">
   <div class="form-row">
     <div class="col-auto">
-      <input type="number" class="form-control" placeholder="Số tiền">
+      <input required type="number" name ="amount" class="form-control" placeholder="Số tiền" [ngModel]="item.amount">
     </div>
     <div class="col-auto">
-      <input type="text" class="form-control" placeholder="Mô tả">
+      <input required type="text" name="description" class="form-control" placeholder="Mô tả" [ngModel]="item.description">
     </div>
     <div class="col-auto">
-      <button type="button" class="btn btn-primary">Add</button>
+      <button type="submit" class="btn btn-primary" [disabled]="!itemform.valid">Thêm</button>
     </div>
   </div>
 
