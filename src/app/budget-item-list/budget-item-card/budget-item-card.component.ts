@@ -9,13 +9,14 @@ import { BudgetItem } from 'src/app/shared/models/budget-items.models';
 export class BudgetItemCardComponent implements OnInit {
   @Input() item: BudgetItem;
   @Output() clickDeleteBtn: EventEmitter<any> = new EventEmitter<any>();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onClickEdit() {
-    alert('Edit row');
+  onCardClick() {
+    this.cardClick.emit();
   }
   onClickDelete() {
     this.clickDeleteBtn.emit();

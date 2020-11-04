@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 html,
 body {
   height: 100%;
@@ -26,11 +28,6 @@ body {
     background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
     justify-content: center;
     align-items: center;
-}
-.values {
-    font-weight: 300;
-    font-size: 60px;
-    color: white;
 }
 .center {
     display: flex;
