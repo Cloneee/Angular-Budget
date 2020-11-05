@@ -14,17 +14,26 @@ export class BudgetComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.totalBudget = 0;
+    if (this.budgetItems.length == 0){
+      this.budgetItems = JSON.parse(localStorage.getItem("savedData"));
+    }
+    for (let i=0; i<this.budgetItems.length; i++){
+      this.totalBudget += this.budgetItems[i].amount;
+    }
   }
 
   addItem(newItem: BudgetItem){
     this.budgetItems.push(newItem);
     this.totalBudget += newItem.amount;
+    localStorage.setItem("savedData", JSON.stringify(this.budgetItems));
   }
 
   deleteItem(item: BudgetItem){
     let index = this.budgetItems.indexOf(item);
     this.budgetItems.splice(index,1);
     this.totalBudget -= item.amount;
+    localStorage.setItem("savedData", JSON.stringify(this.budgetItems));
   }
 
   updateItem(updateEvent: UpdateEvent){
@@ -32,5 +41,6 @@ export class BudgetComponent implements OnInit {
 
     this.totalBudget -= updateEvent.old.amount;
     this.totalBudget += updateEvent.new.amount;
+    localStorage.setItem("savedData", JSON.stringify(this.budgetItems));
   }
 }
