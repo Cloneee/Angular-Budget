@@ -11,27 +11,35 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-.header{
-    font-weight: 500;
-    font-size: 30px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
+
+.header {
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
-.total-budget{
-    display: flex;
-    height: 250px;
-    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
-    justify-content: center;
-    align-items: center;
+.total-budget {
+  display: flex;
+  height: 250px;
+  background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+  justify-content: center;
+  align-items: center;
 }
+
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.value {
+  font-weight: 300;
+  font-size: 100px;
+}

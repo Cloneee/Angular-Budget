@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./convert.component.css'],
 })
 export class ConvertComponent implements OnInit {
-  rate = {
+
+  result: number = 0;
+
+  rates = {
     USD: 1,
     AED: 3.67,
     ARS: 78.3,
@@ -65,5 +68,6 @@ export class ConvertComponent implements OnInit {
   
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }
