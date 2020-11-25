@@ -1,3 +1,4 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConvertComponent implements OnInit {
 
+  selectedCur1: number = 0;
+  selectedCur2: number = 0;
   result: number = 0;
+  money: number;
+  temp: number;
 
   rates = {
     USD: 1,
@@ -70,4 +75,15 @@ export class ConvertComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  convertClick(){
+    this.result = this.money/this.selectedCur1*this.selectedCur2;
+  }
+
+  swap(){
+    this.temp = this.selectedCur1;
+    this.selectedCur1 = this.selectedCur2;
+    this.selectedCur2 = this.temp;
+  }
+
 }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "budget-management-a6680": {
+      "hosting": {
+        "Angular-Budget": [
+          "budget-management-a6680"
+        ]
+      }
+    }
+  }
+}

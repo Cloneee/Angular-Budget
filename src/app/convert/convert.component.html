@@ -1,21 +1,21 @@
 <div>
   <section class="total-budget">
-    <div class="value" style="color: white;"> {{ result }}</div>
+    <div class="value" style="color: white;"> {{ result | number }}</div>
   </section>
-  <form>
+  <form >
     <div class="container" style="padding-top: 20px;">
 
       <div class="form-row">
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <input required type="number" class="form-control" placeholder="Số tiền">
+          <input required type="number" class="form-control" placeholder="Số tiền" name="money" [(ngModel)]="money">
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 col-5">
-          <select class="form-control" name="unit1">
-            <option selected>Chọn đơn vị</option>
+          <select class="form-control" name="unit1" [(ngModel)]="selectedCur1">
+            <option value=0 >Chọn đơn vị</option>
             <option value="{{ rate.value }}" *ngFor="let rate of rates | keyvalue">{{ rate.key }}</option>
           </select>
         </div>
-        <div class="col-lg-1 col-md-1 col-sm-2 col-2"><button class="btn btn-secondary">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2"><button class="btn btn-secondary" (click)="swap()">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -23,12 +23,12 @@
             </svg>
           </button></div>
         <div class="col-lg-3 col-md-3 col-sm-5 col-5">
-          <select class="form-control" name="unit2">
-            <option selected>Chọn đơn vị</option>
+          <select class="form-control" name="unit2" [(ngModel)]="selectedCur2">
+            <option value=0 >Chọn đơn vị</option>
             <option value="{{ rate.value }}" *ngFor="let rate of rates | keyvalue">{{ rate.key }}</option>
           </select>
         </div>
-        <div class="col-lg-1 col-md-1 col"><button class="btn btn-info">Đổi</button></div>
+        <div class="col-lg-1 col-md-1 col"><button class="btn btn-info" (click)="convertClick()">Đổi</button></div>
       </div>
 
     </div>

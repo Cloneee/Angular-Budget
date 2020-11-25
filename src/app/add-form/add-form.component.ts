@@ -20,7 +20,7 @@ export class AddFormComponent implements OnInit {
       this.isNewItem = false;
     } else {
       this.isNewItem = true;
-      this.item = new BudgetItem('', null);
+      this.item = new BudgetItem('', 0);
     }
   }
 
