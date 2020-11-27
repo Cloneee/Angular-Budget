@@ -10,6 +10,7 @@ export class ConvertComponent implements OnInit {
 
   selectedCur1: number = 0;
   selectedCur2: number = 0;
+  text: string = '';
   result: number = 0;
   money: number;
   temp: number;
@@ -78,6 +79,8 @@ export class ConvertComponent implements OnInit {
 
   convertClick(){
     this.result = this.money/this.selectedCur1*this.selectedCur2;
+    let el = document.getElementById('unit2') as HTMLSelectElement;
+    this.text = el.options[el.selectedIndex].innerHTML;
   }
 
   swap(){

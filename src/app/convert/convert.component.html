@@ -1,6 +1,6 @@
 <div>
   <section class="total-budget">
-    <div class="value" style="color: white;"> {{ result | number }}</div>
+    <div class="value" style="color: white;"> {{ result | number }}  {{  text }}</div>
   </section>
   <form >
     <div class="container" style="padding-top: 20px;">
@@ -10,7 +10,7 @@
           <input required type="number" class="form-control" placeholder="Số tiền" name="money" [(ngModel)]="money">
         </div>
         <div class="col-lg-3 col-md-3 col-sm-5 col-5">
-          <select class="form-control" name="unit1" [(ngModel)]="selectedCur1">
+          <select class="form-control" name="unit1" [(ngModel)]="selectedCur1" id="unit1">
             <option value=0 >Chọn đơn vị</option>
             <option value="{{ rate.value }}" *ngFor="let rate of rates | keyvalue">{{ rate.key }}</option>
           </select>
@@ -23,7 +23,7 @@
             </svg>
           </button></div>
         <div class="col-lg-3 col-md-3 col-sm-5 col-5">
-          <select class="form-control" name="unit2" [(ngModel)]="selectedCur2">
+          <select class="form-control" name="unit2" [(ngModel)]="selectedCur2" id="unit2">
             <option value=0 >Chọn đơn vị</option>
             <option value="{{ rate.value }}" *ngFor="let rate of rates | keyvalue">{{ rate.key }}</option>
           </select>

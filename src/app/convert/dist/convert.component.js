@@ -12,6 +12,7 @@ var ConvertComponent = /** @class */ (function () {
     function ConvertComponent() {
         this.selectedCur1 = 0;
         this.selectedCur2 = 0;
+        this.text = '';
         this.result = 0;
         this.rates = {
             USD: 1,
@@ -74,6 +75,8 @@ var ConvertComponent = /** @class */ (function () {
     };
     ConvertComponent.prototype.convertClick = function () {
         this.result = this.money / this.selectedCur1 * this.selectedCur2;
+        var el = document.getElementById('unit2');
+        this.text = el.options[el.selectedIndex].innerHTML;
     };
     ConvertComponent.prototype.swap = function () {
         this.temp = this.selectedCur1;

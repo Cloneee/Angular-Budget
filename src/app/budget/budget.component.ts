@@ -15,11 +15,11 @@ export class BudgetComponent implements OnInit {
 
   ngOnInit(): void {
     this.totalBudget = 0;
-    if (this.budgetItems.length == 0){
+    if (localStorage.hasOwnProperty("savedData")){
       this.budgetItems = JSON.parse(localStorage.getItem("savedData"));
-    }
-    for (let i=0; i<this.budgetItems.length; i++){
-      this.totalBudget += this.budgetItems[i].amount;
+      for (let i=0; i<this.budgetItems.length; i++){
+        this.totalBudget += this.budgetItems[i].amount;
+      }
     }
   }
 

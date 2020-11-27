@@ -20,7 +20,7 @@ var AddFormComponent = /** @class */ (function () {
         }
         else {
             this.isNewItem = true;
-            this.item = new budget_items_models_1.BudgetItem('', 0);
+            this.item = new budget_items_models_1.BudgetItem('', null);
         }
     };
     AddFormComponent.prototype.onSubmit = function (form) {
