@@ -1,6 +1,6 @@
 <div class="d-flex flex-row justify-content-between budget-item" [ngClass]="{'income': item.amount>=0, 'expense': item.amount<0}" >
   <div class="description align-self-center" (click)="onCardClick()">{{ item.description }}</div>
-  <div class="amount" (click)="onCardClick()">{{ item.amount }}</div>
+  <div class="amount" (click)="onCardClick()">{{ item.amount | number }}</div>
   <div class="close-btn" (click)="onClickDelete()">
     <svg width="1.2rem" height="1.2rem" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="#D90226"
       xmlns="http://www.w3.org/2000/svg">

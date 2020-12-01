@@ -81,6 +81,14 @@ export class ConvertComponent implements OnInit {
     this.result = this.money/this.selectedCur1*this.selectedCur2;
     let el = document.getElementById('unit2') as HTMLSelectElement;
     this.text = el.options[el.selectedIndex].innerHTML;
+    if ((this.selectedCur1 == 0) || (this.selectedCur2 == 0)){
+      this.text = "Bạn chưa chọn đơn vị";
+      this.result = null;
+    }
+    if (this.money == null){
+      this.text = "Bạn chưa nhập số tiền";
+      this.result = null;
+    }
   }
 
   swap(){

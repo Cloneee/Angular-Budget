@@ -1,5 +1,5 @@
 <section class="total-budget">
-  <div class="value" [ngClass]="{'income': totalBudget>=0,'expenses': totalBudget<0}">{{ totalBudget }}</div>
+  <div class="value" [ngClass]="{'income': totalBudget>=0,'expenses': totalBudget<0}">{{ totalBudget | number }}</div>
 </section>
 <section class="add-items-section">
   <div class="add-items-container">

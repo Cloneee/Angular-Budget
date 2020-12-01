@@ -77,6 +77,14 @@ var ConvertComponent = /** @class */ (function () {
         this.result = this.money / this.selectedCur1 * this.selectedCur2;
         var el = document.getElementById('unit2');
         this.text = el.options[el.selectedIndex].innerHTML;
+        if ((this.selectedCur1 == 0) || (this.selectedCur2 == 0)) {
+            this.text = "Bạn chưa chọn đơn vị";
+            this.result = null;
+        }
+        if (this.money == null) {
+            this.text = "Bạn chưa nhập số tiền";
+            this.result = null;
+        }
     };
     ConvertComponent.prototype.swap = function () {
         this.temp = this.selectedCur1;
